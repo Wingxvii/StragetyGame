@@ -7,7 +7,7 @@ public class TargetSelector : MonoBehaviour
 {
     private RTS_Camera cam;
     private new Camera camera;
-    public string targetsTag;
+    public string[] targetsTag;
 
     private void Start()
     {
@@ -23,10 +23,17 @@ public class TargetSelector : MonoBehaviour
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.CompareTag(targetsTag))
-                    cam.SetTarget(hit.transform);
-                else
+                bool foundTarget = false;
+                foreach (string target in targetsTag) {
+                    if (hit.transform.CompareTag(target))
+                    {
+                        cam.SetTarget(hit.transform);
+                        foundTarget = true;
+                    }
+                }
+                if (!foundTarget) {
                     cam.ResetTarget();
+                }
             }
         }
     }
