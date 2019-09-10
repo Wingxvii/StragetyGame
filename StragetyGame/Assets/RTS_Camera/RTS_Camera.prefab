@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ef8c68bade09b41aca258d42a632f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastTab: 0
+  lastTab: 1
   movementSettingsFoldout: 1
   zoomingSettingsFoldout: 0
   rotationSettingsFoldout: 1
@@ -141,7 +141,7 @@ MonoBehaviour:
   keyboardMovementSpeed: 30
   screenEdgeMovementSpeed: 3
   followingSpeed: 25
-  rotationSped: 3
+  rotationSped: 50
   panningSpeed: 5
   mouseRotationSpeed: 100
   autoHeight: 1
@@ -173,5 +173,5 @@ MonoBehaviour:
   useKeyboardRotation: 1
   rotateRightKey: 120
   rotateLeftKey: 122
-  useMouseRotation: 1
+  useMouseRotation: 0
   mouseRotationKey: 324
